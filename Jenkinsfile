@@ -9,12 +9,14 @@ pipeline {
             }
         }
 
-       stage('Test') {
+        stage('Test') {
             steps {
                 echo 'Testing the application...'
                 bat 'exit 1'
             }
         }
+    }
+
     post {
         success {
             echo 'Pipeline completed successfully!'
